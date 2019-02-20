@@ -573,15 +573,22 @@ namespace Schroeter.Photo
                 return null;
             else
             {
-                DateTime d = new DateTime(
-                    int.Parse(s.Substring(0, 4)),
-                    int.Parse(s.Substring(5, 2)),
-                    int.Parse(s.Substring(8, 2)),
-                    int.Parse(s.Substring(11, 2)),
-                    int.Parse(s.Substring(14, 2)),
-                    int.Parse(s.Substring(17, 2)));
+                try
+                {
+                    DateTime d = new DateTime(
+                        int.Parse(s.Substring(0, 4)),
+                        int.Parse(s.Substring(5, 2)),
+                        int.Parse(s.Substring(8, 2)),
+                        int.Parse(s.Substring(11, 2)),
+                        int.Parse(s.Substring(14, 2)),
+                        int.Parse(s.Substring(17, 2)));
 
-                return d;
+                    return d;
+                }
+                catch (FormatException)
+                {
+                    return null;
+                }
             }
         }
         private void setExifDateTimeAttribute(string name, DateTime? value)
