@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Macro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DescriptionLines>
+    <string>This macro copies files from direve w: (e.g. your camera) to c:\photos.</string>
+    <string>After copy it tags some IPTC fields of the new files in c:\photos and executes both plugins to add a tag for the year and fix the orientation tag. </string>
+  </DescriptionLines>
+  <WorkItems>
+    <ModelBase xsi:type="CopyMoveModel">
+      <SourceDirectory>w:\</SourceDirectory>
+      <DestinationDirecotry>c:\Photos</DestinationDirecotry>
+      <ReadFromSubdirectories>false</ReadFromSubdirectories>
+      <FilenameFormat>%dc[yyyy-MM-dd HH-mm-ss]</FilenameFormat>
+      <DirectorynameFormat>%dc[yyyy-MM-dd]</DirectorynameFormat>
+      <Mode>copy</Mode>
+      <DirectoryMode>createDestinationSubdirs</DirectoryMode>
+      <ExecuteFollowingMacrosOn>destination</ExecuteFollowingMacrosOn>
+    </ModelBase>
+    <ModelBase xsi:type="IptcModel">
+      <Headline />
+      <Caption />
+      <ObjectName />
+      <Writer />
+      <Author />
+      <Copyright>Benjamin Schröter</Copyright>
+      <Contact />
+      <City>berlin</City>
+      <Sublocation />
+      <ProvinceState />
+      <CountryName>germany</CountryName>
+      <CountryCode>GER</CountryCode>
+      <Created>2007-08-30T14:50:38.029+02:00</Created>
+      <HeadlineChecked>false</HeadlineChecked>
+      <CaptionChecked>false</CaptionChecked>
+      <ObjectNameChecked>false</ObjectNameChecked>
+      <WriteChecked>false</WriteChecked>
+      <AuthorChecked>false</AuthorChecked>
+      <CopyrightChecked>true</CopyrightChecked>
+      <ContactChecked>false</ContactChecked>
+      <CityChecked>true</CityChecked>
+      <SublocationChecked>false</SublocationChecked>
+      <ProvinceStateChecked>false</ProvinceStateChecked>
+      <CountryNameChecked>true</CountryNameChecked>
+      <CountryCodeChecked>true</CountryCodeChecked>
+      <CreatedChecked>true</CreatedChecked>
+      <KeywordChecked>false</KeywordChecked>
+      <GetDateFromExifChecked>true</GetDateFromExifChecked>
+      <KeywordsChecked />
+      <KeywordsUnchecked />
+    </ModelBase>
+    <ModelBase xsi:type="PluginModel">
+      <Plugin>Schroeter.Photo.DefaultPlugins.TagTheYearPlugin</Plugin>
+    </ModelBase>
+    <ModelBase xsi:type="PluginModel">
+      <Plugin>Schroeter.Photo.DefaultPlugins.FixOrientationPlugin</Plugin>
+    </ModelBase>
+  </WorkItems>
+  <Name>Sample Macro</Name>
+</Macro>

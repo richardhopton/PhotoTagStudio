@@ -1,0 +1,117 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Schroeter.PhotoTagStudio.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Headlines" Type="Schroeter.PhotoTagStudio.Data.TagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Captions" Type="Schroeter.PhotoTagStudio.Data.TagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Objectnames" Type="Schroeter.PhotoTagStudio.Data.TagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Writers" Type="Schroeter.PhotoTagStudio.Data.TagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Authors" Type="Schroeter.PhotoTagStudio.Data.TagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Copyrights" Type="Schroeter.PhotoTagStudio.Data.TagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Keywords" Type="Schroeter.PhotoTagStudio.Data.TagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Contacts" GenerateDefaultValueInCode="false" Type="Schroeter.PhotoTagStudio.Data.TagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Locations" Type="Schroeter.PhotoTagStudio.Data.LocationList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DisplayIPTCTagsWithFlickrNames" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GroupedKeywords" Type="Schroeter.PhotoTagStudio.Data.GroupedTagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GuiShowPreview" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="GuiShowDirectoryTree" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RotatePreview" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="GPSTimeOffset" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:00</Value>
+    </Setting>
+    <Setting Name="KmzHeading" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="KmzTilt" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="KmzRange" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">160</Value>
+    </Setting>
+    <Setting Name="KmzOpenFile" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="KmzPictureSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="LoadThumbnailsInBackground" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LastWorkingDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GoToNextPicture" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NewSettingFile" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PresetModels" Type="Schroeter.PhotoTagStudio.Data.PresetStore" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FilenameFormats" Type="Schroeter.PhotoTagStudio.Data.TagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DirectorynameFormats" Type="Schroeter.PhotoTagStudio.Data.TagList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MacroDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MacroRecentFiles" Type="Schroeter.PhotoTagStudio.Data.RecentList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RenameUseSubdirectories" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MacroUseSubdirectories" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="KmzLineWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="KmzLineColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="VisibleTabs" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;IPTC&lt;/string&gt;
+  &lt;string&gt;EXIF&lt;/string&gt;
+  &lt;string&gt;EXIF Dates&lt;/string&gt;
+  &lt;string&gt;Rename&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="CollapseIptcKeywordGroupsOnStartup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

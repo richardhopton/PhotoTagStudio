@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <Document>
+    <name></name>
+    <open>1</open>
+    <Style id="Photo">
+      <IconStyle>
+        <scale>2</scale>
+        <Icon>
+          <href>root://icons/palette-4.png</href>
+          <x>128</x>
+          <y>128</y>
+          <w>32</w>
+          <h>32</h>
+        </Icon>
+      </IconStyle>
+    </Style>
+  </Document>
+</kml>

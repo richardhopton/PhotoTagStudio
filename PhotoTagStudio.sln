@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoTagStudio", "PhotoTagStudio\PhotoTagStudio.csproj", "{BBC0C732-AE06-477B-ADD3-1E04A7E4B40C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureMetaData", "PictureMetaData\PictureMetaData.csproj", "{44B01CF0-C2C5-48A2-B586-DF7783D1139A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controls", "Controls\Controls.csproj", "{782A6839-5022-49A7-9725-AA398CE1DBA3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{5428AC2E-0ED6-4DC8-8E95-1D9F28403BDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KmlGenerator", "KmlGenerator\KmlGenerator.csproj", "{8DADECDE-6B40-4EDF-AB6D-F99B593B3C46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultPlugins", "DefaultPlugins\DefaultPlugins.csproj", "{50FFC78C-EA57-46D6-8AC4-7D7753EC88E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LensPlugin", "LensPlugin\LensPlugin.csproj", "{4FF03D67-33BB-4FB5-8935-8A5F900CD491}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBC0C732-AE06-477B-ADD3-1E04A7E4B40C}.Debug|x86.ActiveCfg = Debug|x86
+		{BBC0C732-AE06-477B-ADD3-1E04A7E4B40C}.Debug|x86.Build.0 = Debug|x86
+		{BBC0C732-AE06-477B-ADD3-1E04A7E4B40C}.Release|x86.ActiveCfg = Release|x86
+		{BBC0C732-AE06-477B-ADD3-1E04A7E4B40C}.Release|x86.Build.0 = Release|x86
+		{44B01CF0-C2C5-48A2-B586-DF7783D1139A}.Debug|x86.ActiveCfg = Debug|x86
+		{44B01CF0-C2C5-48A2-B586-DF7783D1139A}.Debug|x86.Build.0 = Debug|x86
+		{44B01CF0-C2C5-48A2-B586-DF7783D1139A}.Release|x86.ActiveCfg = Release|x86
+		{44B01CF0-C2C5-48A2-B586-DF7783D1139A}.Release|x86.Build.0 = Release|x86
+		{782A6839-5022-49A7-9725-AA398CE1DBA3}.Debug|x86.ActiveCfg = Debug|x86
+		{782A6839-5022-49A7-9725-AA398CE1DBA3}.Debug|x86.Build.0 = Debug|x86
+		{782A6839-5022-49A7-9725-AA398CE1DBA3}.Release|x86.ActiveCfg = Release|x86
+		{782A6839-5022-49A7-9725-AA398CE1DBA3}.Release|x86.Build.0 = Release|x86
+		{5428AC2E-0ED6-4DC8-8E95-1D9F28403BDC}.Debug|x86.ActiveCfg = Debug
+		{5428AC2E-0ED6-4DC8-8E95-1D9F28403BDC}.Release|x86.ActiveCfg = Release
+		{5428AC2E-0ED6-4DC8-8E95-1D9F28403BDC}.Release|x86.Build.0 = Release
+		{8DADECDE-6B40-4EDF-AB6D-F99B593B3C46}.Debug|x86.ActiveCfg = Debug|x86
+		{8DADECDE-6B40-4EDF-AB6D-F99B593B3C46}.Debug|x86.Build.0 = Debug|x86
+		{8DADECDE-6B40-4EDF-AB6D-F99B593B3C46}.Release|x86.ActiveCfg = Release|x86
+		{8DADECDE-6B40-4EDF-AB6D-F99B593B3C46}.Release|x86.Build.0 = Release|x86
+		{50FFC78C-EA57-46D6-8AC4-7D7753EC88E8}.Debug|x86.ActiveCfg = Debug|x86
+		{50FFC78C-EA57-46D6-8AC4-7D7753EC88E8}.Debug|x86.Build.0 = Debug|x86
+		{50FFC78C-EA57-46D6-8AC4-7D7753EC88E8}.Release|x86.ActiveCfg = Release|x86
+		{50FFC78C-EA57-46D6-8AC4-7D7753EC88E8}.Release|x86.Build.0 = Release|x86
+		{4FF03D67-33BB-4FB5-8935-8A5F900CD491}.Debug|x86.ActiveCfg = Debug|x86
+		{4FF03D67-33BB-4FB5-8935-8A5F900CD491}.Debug|x86.Build.0 = Debug|x86
+		{4FF03D67-33BB-4FB5-8935-8A5F900CD491}.Release|x86.ActiveCfg = Release|x86
+		{4FF03D67-33BB-4FB5-8935-8A5F900CD491}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

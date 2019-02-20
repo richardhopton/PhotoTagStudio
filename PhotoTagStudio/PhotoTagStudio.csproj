@@ -1,0 +1,546 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBC0C732-AE06-477B-ADD3-1E04A7E4B40C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Schroeter.PhotoTagStudio</RootNamespace>
+    <AssemblyName>PhotoTagStudio</AssemblyName>
+    <ManifestCertificateThumbprint>306E9B444C050DB73FDCBD8FFB73F3F6B205AECB</ManifestCertificateThumbprint>
+    <ManifestKeyFile>PhotoTagStudio_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <PublishUrl>D:\Projekte\Pictures\OneClick\PhotoTagStudio\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.irgendwie.net/PhotoTagStudio/</InstallUrl>
+    <ProductName>PhotoTagStudio</ProductName>
+    <PublisherName>Benjamin Schröter</PublisherName>
+    <ApplicationVersion>0.3.0.0</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ApplicationIcon>Resources\PTS.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Raccoom.TreeViewFolderBrowser, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\DirTreeView\1.1\TreeViewExplorer_demo\Raccoom.TreeViewFolderBrowser.Demo\bin\Release\Raccoom.TreeViewFolderBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="Raccoom.TreeViewFolderBrowser.DataProviders, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\DirTreeView\1.1\TreeViewExplorer_demo\Raccoom.TreeViewFolderBrowser.Demo\bin\Release\Raccoom.TreeViewFolderBrowser.DataProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="ShellLib, Version=1.0.3535.1894, Culture=neutral, PublicKeyToken=9e108bb36238ab08, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\ShellBasics\ShellBasics\bin\x86\Debug\ShellLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\BaseTagList.cs" />
+    <Compile Include="Data\ExifDateModel.cs" />
+    <Compile Include="Data\ExifGpsModel.cs" />
+    <Compile Include="Data\GroupedTagList.cs" />
+    <Compile Include="Data\GroupedTagListHelper.cs" />
+    <Compile Include="Data\GroupValuePairComparer.cs" />
+    <Compile Include="Data\IptcModel.cs" />
+    <Compile Include="Data\KeyValueStore.cs" />
+    <Compile Include="Data\Location.cs" />
+    <Compile Include="Data\LocationList.cs" />
+    <Compile Include="Data\Macro.cs" />
+    <Compile Include="Data\ModelBase.cs" />
+    <Compile Include="Data\ModelStore.cs" />
+    <Compile Include="Data\PluginModel.cs" />
+    <Compile Include="Data\PresetStore.cs" />
+    <Compile Include="Data\PresetStoreXml.cs" />
+    <Compile Include="Data\RenameModel.cs" />
+    <Compile Include="Data\RecentList.cs" />
+    <Compile Include="Data\TagList.cs" />
+    <Compile Include="Data\Util.cs" />
+    <Compile Include="ErrorHandler.cs" />
+    <Compile Include="ExifDateController.cs" />
+    <Compile Include="Features\About\AboutAndInfo.cs" />
+    <Compile Include="Features\About\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\About\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\About\TextDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\About\TextDisplayForm.Designer.cs">
+      <DependentUpon>TextDisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\KmzMaker\GpsLog.cs" />
+    <Compile Include="Features\KmzMaker\GpsLogEntry.cs" />
+    <Compile Include="Features\KmzMaker\GpsLogFactory.cs" />
+    <Compile Include="Features\KmzMaker\KmzMakerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\KmzMaker\KmzMakerForm.Designer.cs">
+      <DependentUpon>KmzMakerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\KmzMaker\NamedGpsLogEntry.cs" />
+    <Compile Include="Features\KmzMaker\PictureGpsOffsetDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\KmzMaker\PictureGpsOffsetDialog.Designer.cs">
+      <DependentUpon>PictureGpsOffsetDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\MassTagging\MassTaggingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\MassTagging\MassTaggingForm.Designer.cs">
+      <DependentUpon>MassTaggingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\MassTagging\MassWorkingFile.cs" />
+    <Compile Include="Features\MassTagging\TagCollection.cs" />
+    <Compile Include="Features\MassTagging\TagEntry.cs" />
+    <Compile Include="Features\Renamer\CopyMoveController.cs" />
+    <Compile Include="Features\Renamer\CopyMoveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\Renamer\CopyMoveForm.Designer.cs">
+      <DependentUpon>CopyMoveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Renamer\CopyMoveView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Renamer\CopyMoveView.Designer.cs">
+      <DependentUpon>CopyMoveView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Renamer\CopyMoveModel.cs" />
+    <Compile Include="Features\Renamer\CopyMoveWorker.cs" />
+    <Compile Include="Features\Renamer\FileSystemInfoComparer.cs" />
+    <Compile Include="FileUtils.cs" />
+    <Compile Include="Gui\ExifDateView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ExifDateView.Designer.cs">
+      <DependentUpon>ExifDateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\GuiUtils.cs" />
+    <Compile Include="Gui\KeyboardInteractionPresetableView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\VisibleTabs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\VisibleTabs.Designer.cs">
+      <DependentUpon>VisibleTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Macros.cs" />
+    <Compile Include="Gui\PluginView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PluginView.Designer.cs">
+      <DependentUpon>PluginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\StandAloneMacroExecutionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\StandAloneMacroExecutionForm.Designer.cs">
+      <DependentUpon>StandAloneMacroExecutionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\FolderBrowseBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\FolderBrowseBox.Designer.cs">
+      <DependentUpon>FolderBrowseBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\FormWithStatusDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PluginController.cs" />
+    <Compile Include="Workers\ExifDateWorker.cs" />
+    <Compile Include="Workers\ExifGpsWorker.cs" />
+    <Compile Include="Gui\CompleteTagList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\CompleteTagList.Designer.cs">
+      <DependentUpon>CompleteTagList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MacroEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\MacroEditor.Designer.cs">
+      <DependentUpon>MacroEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PresetableViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\RenameView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\RenameView.Designer.cs">
+      <DependentUpon>RenameView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ExifGpsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ExifGpsView.Designer.cs">
+      <DependentUpon>ExifGpsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\IptcView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\IptcView.Designer.cs">
+      <DependentUpon>IptcView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\EXIFDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\EXIFDisplay.Designer.cs">
+      <DependentUpon>EXIFDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Renamer\FileNameFormater.cs" />
+    <Compile Include="Gui\ImageDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ImageDisplay.Designer.cs">
+      <DependentUpon>ImageDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PictureDetailControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PictureDetailControlBase.Designer.cs">
+      <DependentUpon>PictureDetailControlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PictureDetailControlList.cs" />
+    <Compile Include="Gui\PictureDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PictureDisplay.Designer.cs">
+      <DependentUpon>PictureDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PresetableViewSaveLast.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PresetableView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PresetableView.Designer.cs">
+      <DependentUpon>PresetableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Settings\ITPCMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\ITPCMain.Designer.cs">
+      <DependentUpon>ITPCMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Settings\KmzAndGps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\KmzAndGps.Designer.cs">
+      <DependentUpon>KmzAndGps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Settings\LocationListEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\LocationListEditor.Designer.cs">
+      <DependentUpon>LocationListEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Settings\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Settings\SettingsMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\SettingsMain.Designer.cs">
+      <DependentUpon>SettingsMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Settings\TagListEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\TagListEditor.Designer.cs">
+      <DependentUpon>TagListEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Renamer\RenamerEngine.cs" />
+    <Compile Include="IPictureDetailControllerBase.cs" />
+    <Compile Include="IptcGpsController.cs" />
+    <Compile Include="Workers\IptcWorker.cs" />
+    <Compile Include="IStatusDisplay.cs" />
+    <Compile Include="MacroEnabledAttribute.cs" />
+    <Compile Include="Workers\MacroWorker.cs" />
+    <Compile Include="Workers\MultiFileWorkerBase.cs" />
+    <Compile Include="PictureDetailControllerBase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RenameController.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsManager.cs" />
+    <Compile Include="Workers\PluginWorker.cs" />
+    <Compile Include="Workers\RenameWorker.cs" />
+    <Compile Include="Workers\SingleFileWorkerBase.cs" />
+    <Compile Include="StatusDisplay.cs" />
+    <Compile Include="ThumbnailCache.cs" />
+    <Compile Include="Workers\WorkerBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{782A6839-5022-49A7-9725-AA398CE1DBA3}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KmlGenerator\KmlGenerator.csproj">
+      <Project>{8DADECDE-6B40-4EDF-AB6D-F99B593B3C46}</Project>
+      <Name>KmlGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PictureMetaData\PictureMetaData.csproj">
+      <Project>{44B01CF0-C2C5-48A2-B586-DF7783D1139A}</Project>
+      <Name>PictureMetaData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Features\MassTagging\MassTaggingForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MassTaggingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ChangeLog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="exivsimple.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Icons\saveHS.png" />
+    <None Include="Icons\FormRunHS.png" />
+    <None Include="Icons\NewDocumentHS.png" />
+    <Content Include="Icons\delete.png" />
+    <Content Include="Icons\MoveToFolderHS.ico" />
+    <Content Include="Icons\MoveToFolderHS.png" />
+    <Content Include="Icons\NextPicture.png" />
+    <Content Include="Icons\PrevPicture.png" />
+    <Content Include="Icons\RecorderPlayHS.ico" />
+    <Content Include="Icons\RecorderPlayHS.png" />
+    <Content Include="Resources\IconVeryBig.png" />
+    <Content Include="Resources\PTS.ico" />
+    <None Include="Icons\rotate_right.png" />
+    <None Include="Icons\rotate_left.png" />
+    <None Include="Icons\Picture.bmp" />
+    <None Include="Icons\TreeView.bmp" />
+    <None Include="Icons\openfolderHS.png" />
+    <None Include="Properties\DataSources\ExifDateController.datasource" />
+    <None Include="Properties\DataSources\IptcGpsController.datasource" />
+    <None Include="Properties\DataSources\RenameController.datasource" />
+    <None Include="Properties\DataSources\Schroeter.PhotoTagStudio.Data.ExifDateModel.datasource" />
+    <None Include="Properties\DataSources\Schroeter.PhotoTagStudio.Data.ExifGpsModel.datasource" />
+    <None Include="Properties\DataSources\Schroeter.PhotoTagStudio.Data.IPTCModel.datasource" />
+    <None Include="Properties\DataSources\Schroeter.PhotoTagStudio.Data.RenameModel.datasource" />
+    <None Include="Properties\DataSources\Schroeter.PhotoTagStudio.Features.Renamer.CopyMoveModel.datasource" />
+    <EmbeddedResource Include="Features\About\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\About\TextDisplayForm.resx">
+      <DependentUpon>TextDisplayForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\KmzMaker\KmzMakerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KmzMakerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\KmzMaker\PictureGpsOffsetDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PictureGpsOffsetDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Renamer\CopyMoveForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CopyMoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Renamer\CopyMoveView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CopyMoveView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ExifDateView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExifDateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PluginView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PluginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Settings\VisibleTabs.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VisibleTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\StandAloneMacroExecutionForm.resx">
+      <DependentUpon>StandAloneMacroExecutionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\CompleteTagList.resx">
+      <DependentUpon>CompleteTagList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\FolderBrowseBox.resx">
+      <DependentUpon>FolderBrowseBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\FormWithStatusDisplay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormWithStatusDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\MacroEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MacroEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\RenameView.resx">
+      <DependentUpon>RenameView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ExifGpsView.resx">
+      <DependentUpon>ExifGpsView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\IptcView.resx">
+      <DependentUpon>IptcView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\EXIFDisplay.resx">
+      <DependentUpon>EXIFDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ImageDisplay.resx">
+      <DependentUpon>ImageDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PictureDetailControlBase.resx">
+      <DependentUpon>PictureDetailControlBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PictureDisplay.resx">
+      <DependentUpon>PictureDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PresetableView.resx">
+      <DependentUpon>PresetableView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Settings\ITPCMain.resx">
+      <DependentUpon>ITPCMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Settings\KmzAndGps.resx">
+      <DependentUpon>KmzAndGps.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Settings\LocationListEditor.resx">
+      <DependentUpon>LocationListEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Settings\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Settings\SettingsMain.resx">
+      <DependentUpon>SettingsMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Settings\TagListEditor.resx">
+      <DependentUpon>TagListEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\gpl.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

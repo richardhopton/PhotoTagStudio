@@ -1,0 +1,82 @@
+Version 0.7 (2008-05-19)
+	a lot of stability enhancements (locking of files and multithreading)	
+	drag and drop files from pts to other programs (e.g. explorer)
+	edit all exif and iptc date fields (absolute or using an offset)
+	delete files from within pts (using del button and toolbar)
+	a details warning message before changing keywords (tags) in all files
+	using PageUp and PageDown to navigate files in current folder
+	configuration dialog for some kmz creation settings (line color and width)
+	hide some of the function tabs on the right side (since there are more and more for each new version)
+	changed some icons
+	setting IPTC time with the correct time zone
+	error message if a plugin needed by a macro is missing 
+	rename: new variable for current name (%file and %dir)
+	version 0.16 of exiv2 lib
+
+Version 0.6.1 (2007-10-09)
+	bugfix release: using the intermediate state for tags in the iptc editor works not correct with the save-to-all-button
+
+Version 0.6 (2007-09-06)
+	copy and move photos from a memory card with renaming (extras->copy photos...)
+	create and exectute macros (ptsmacro-files) (macros-menu)
+	start PhotoTagStudio with a ptsmacro as parameter to execute the macro
+	plugins: uses plugin dlls in the plugin directory. see source of DefaultPlugins
+	rename function: for duplicated filenames the user can choose where to insert the '(1)' in the filename
+	most windows where the user can input data can save presets (try a right mouseclick)
+	no more exception when deleting files in the explorer and trying to edit this file in pts after deleting
+	some more bugfixes
+	usability enhancements
+	version 0.15 of exiv2 lib
+
+Version 0.5 (2007-04-08)
+	first public release
+	higher stability
+	remove exif orientation
+	small changes in GPS tagging and renaming
+	some bugfixes	
+	version 0.13 of exiv2 lib
+
+Version 0.4
+	loading of thumbmails in background
+	editing of GPS tags and KMZ export
+	renaming: now only two instead of three textboxes to configurate the name schema
+	PhotoTagStudio now opens in the directory it was closed last time
+
+Version 0.3 (2006-08-01)
+	minsize for all splitter to prevent some controls become invisible when resizing
+	toolbar
+	change the exif orientation tag (rotate picture)
+	rotate the preview (exif orientation tag)
+	bugfixes in the renamer
+	set the directory-tree invisible
+	better default values for "add automatically" when first installing
+	ask for saving when changing the selected file with unsaved tags
+	mass setting of tags
+	using a tree with categories for keywords instead of a simple list
+	tag files in subdirectories
+	changed behavior for the file-list-box (check and uncheck files)
+	performace enhancements
+	Version 0.10 of exiv2 lib
+	redesign of the settings window
+	refresh with F5 on the directory tree and the file list
+	rename files in subdirectories and renaming of directories
+	defaultvalues for filename format and data time format on the rename tab
+	"open configuration directory" button in settings window
+	imports user settings from previous installt version
+	displaying of flickr names instead of ITPC names for all flickr related tags
+	progressbar in statusbar and hourglass for "save to all"
+	the keywords list supports now three-state-checkboxes. If a keyword is in indeterminate-state this keyword will not be changed in the picture. Usefull for the save to all function
+	zip-files are not longer displayed in the directorytree
+
+Version 0.2 (2005-12-03)
+	performance tuning
+	loading of pictures in backgroundthread
+	displays all EXIF and some JPEG tags
+	using of commandline parameters (directory or file)
+	templates for all IPTC tags
+	settings dialog
+	double click on preview picture
+	renameing
+
+Version 0.1
+	first version

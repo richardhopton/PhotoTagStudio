@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Placemark xmlns="http://earth.google.com/kml/2.0">
+  <name></name>
+  <description></description>
+  <visibility>1</visibility>
+  <open>1</open>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color>
+	  <width>1</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>7f00ff00</color>
+    </PolyStyle>
+  </Style>
+  <LineString>
+    <extrude>1</extrude>
+    <tessellate>1</tessellate>
+    <altitudeMode>relativeToGround</altitudeMode>
+    <coordinates></coordinates>
+  </LineString>
+</Placemark>

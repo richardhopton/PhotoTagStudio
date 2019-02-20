@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Placemark xmlns="http://earth.google.com/kml/2.0">
+  <name></name>
+  <description></description>
+  <LookAt>
+    <longitude></longitude>
+    <latitude></latitude>
+    <range></range>
+    <tilt></tilt>
+    <heading></heading>
+  </LookAt>
+  <styleUrl>#Photo</styleUrl>
+  <Style>
+    <IconStyle>
+      <Icon>
+        <href></href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Point>
+    <coordinates></coordinates>
+  </Point>
+</Placemark>
